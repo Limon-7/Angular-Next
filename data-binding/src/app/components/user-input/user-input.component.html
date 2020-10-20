@@ -1,0 +1,31 @@
+<div class="container">
+  <p>UserInput</p>
+  <hr />
+  <input type="text" (keyup)="clickWithEventObject($event)" />
+  <p>Using event object:{{ inputText }}</p>
+  <hr />
+  <input #tRef type="text" (keyup)="(0)" />
+  <p>Using Templete Reference: {{ tRef.value }}</p>
+  <hr />
+  <input #tRefk type="text" (keyup)="clickWithTRef(tRefk.value)" />
+  <p>keyup with TempleteReference: {{ values }}</p>
+  <hr />
+  <p></p>
+  <input #tRefE type="text" (keyup.enter)="clickEnter(tRefE.value)" />
+  <p>Keyup.enter with enter: {{ enterValues }}</p>
+  <hr style="color: aqua" />
+  <p>Using blur with key up</p>
+  <input
+    #tRefBlur
+    type="text"
+    (keyup.enter)="clickBlur(tRefBlur.value)"
+    (blur)="clickBlur(tRefBlur.value)"
+  />
+  <p>Keyup.enter with enter: {{ blurValues }}</p>
+  <hr style="color: aqua" />
+</div>
+<!-- Note -->
+<!-- 1. To listen user input using keyup with event object -->
+<!-- 2. To listen user input using keyup with templete referenece variable -->
+<!-- 3.To listen user input after enter presse using keyup.enter with Templete reference variable -->
+<!-- 4. To over come outside click using blur to update. -->

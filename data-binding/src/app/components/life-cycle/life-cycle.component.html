@@ -1,0 +1,11 @@
+<p>life-cycle works!</p>
+<button class="btn btn-secondary" (click)="addNew()">Add new heros</button>
+<button class="btn btn-secondary ml-5" (click)="reset()">Remove heros</button>
+
+<app-life-child [datas]="arbitraryData" [heros]="heros">
+  <!-- Content project goes here -->
+  <app-life-content *ngFor="let hero of heros" [hero]="heros">
+    <p class="heading">{{ hero.name }}</p>
+    <p class="department">{{ hero.department }}</p>
+  </app-life-content>
+</app-life-child>

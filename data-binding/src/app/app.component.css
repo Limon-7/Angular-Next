@@ -1,0 +1,21 @@
+button {
+  cursor: pointer;
+}
+.boldClass {
+  font-weight: bold;
+  text-emphasis-color: black;
+}
+
+.italicsClass {
+  font-style: italic;
+  letter-spacing: 0.3ch;
+  padding: 10px;
+}
+
+.colorClass {
+  color: white;
+  background: aqua;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid aqua;
+}

@@ -1,0 +1,12 @@
+<div class="home_container">
+  <div
+    class="home_directory"
+    *ngFor="let data of datas"
+    (click)="handleLink(data.url)"
+  >
+    <div class="home_bg"></div>
+    <div class="menu_content">
+      <h1 class="menu_title">{{ data.name }}</h1>
+    </div>
+  </div>
+</div>

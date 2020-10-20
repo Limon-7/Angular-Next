@@ -1,0 +1,32 @@
+<div class="nav">
+  <a [routerLink]="['/http']"><h4>Http Core</h4></a>
+  <ul>
+    <li
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a routerLink="/http/observable">Obseravable</a>
+    </li>
+    <li
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a routerLink="/http/promise">Promise</a>
+    </li>
+    <li
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a routerLink="/http/observable/jsonp">Observable Jsnop</a>
+    </li>
+    <li
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a routerLink="/http/promise/jsonp">Promise Jsonp</a>
+    </li>
+  </ul>
+</div>
+<div class="http_body">
+  <router-outlet></router-outlet>
+</div>

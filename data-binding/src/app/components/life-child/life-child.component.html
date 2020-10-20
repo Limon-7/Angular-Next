@@ -1,0 +1,14 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="clickMe()">ChildClass</button>
+  <p>{{ data }}</p>
+  <!-- <div>
+    <li *ngFor="let i of heros">{{ i.name }} department:{{ i.department }}</li>
+  </div> -->
+  <app-content *ngFor="let hero of heros">
+    <p class="heading">{{ hero.name }}</p>
+    <p class="department">{{ hero.department }}</p>
+  </app-content>
+
+  <h1>Content</h1>
+  <ng-content></ng-content>
+</div>

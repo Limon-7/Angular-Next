@@ -1,0 +1,15 @@
+<div class="nav">
+  <a [routerLink]="['/']"><h4>Rxjs</h4></a>
+  <ul>
+    <li
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      *ngFor="let url of childRoute"
+    >
+      <a routerLink="/{{ routeName }}/{{ url.url }}">{{ url.name }}</a>
+    </li>
+  </ul>
+</div>
+<div class="utility__body">
+  <router-outlet></router-outlet>
+</div>

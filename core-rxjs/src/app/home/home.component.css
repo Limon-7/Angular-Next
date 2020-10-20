@@ -1,0 +1,23 @@
+.home_container {
+  padding: 20px;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home_directory {
+  min-width: 25%;
+  height: 150px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 7.5px 15px;
+  background: rgb(124, 9, 99);
+  color: whitesmoke;
+  cursor: pointer;
+}

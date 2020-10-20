@@ -1,0 +1,134 @@
+<div class="container mt-5" appHighlight bgColor="red" textColor="white">
+  <!-- we can bind it at a single value example: [appHighlight]="color" -->
+  <form #userForm="ngForm" (ngSubmit)="register()">
+    <p>Form Value:{{ userForm.value | json }}</p>
+    <hr />
+    <p>Model value:{{ userModel | json }}</p>
+
+    <div ngModelGroup="address" class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity" [style.font-size.px]="14">City</label>
+        <input
+          #city="ngModel"
+          type="text"
+          class="form-control"
+          name="city"
+          [(ngModel)]="userModel.city"
+        />
+      </div>
+      <span>{{ city.touched }}</span>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <input
+          type="text"
+          class="form-control"
+          name="state"
+          [(ngModel)]="userModel.state"
+        />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input
+          type="text"
+          class="form-control"
+          name="zip"
+          [(ngModel)]="userModel.zip"
+        />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        [(ngModel)]="userModel.name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        [(ngModel)]="userModel.email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input
+        type="phone"
+        class="form-control"
+        name="phone"
+        [(ngModel)]="userModel.phone"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        [(ngModel)]="userModel.password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        name="confirmPassword"
+        [(ngModel)]="userModel.password"
+      />
+    </div>
+    <div class="form-group">
+      <label for="country">country</label>
+      <select
+        class="form-control"
+        id="country"
+        (change)="handleChange($event)"
+        name="country"
+        [(ngModel)]="userModel.country"
+      >
+        <option value="0">Select Country</option>
+        <option *ngFor="let c of country" value="{{ c.id }}">
+          {{ c.value }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <label for="gender">Gender</label>
+      <div class="form-check-inline">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="gender"
+          [(ngModel)]="userModel.gender"
+          value="male"
+        />
+        <label class="form-check-label"> Male </label>
+      </div>
+      <div class="form-check-inline">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="gender"
+          [(ngModel)]="userModel.gender"
+          value="female"
+        />
+        <label class="form-check-label"> Female </label>
+      </div>
+    </div>
+    <div class="form-group form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        name="isSubscribed"
+        [(ngModel)]="userModel.isSubscribed"
+      />
+      <label class="form-check-label" for="isSubscribed">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+.nav {
+  background: indigo;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  box-shadow: 1px 1px 10px rgb(241, 230, 230);
+}
+.nav > ul {
+  list-style: none;
+}
+.nav > ul > li {
+  display: inline-block;
+}
+.nav > ul > li {
+  margin: auto 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+a {
+  color: #fff;
+}
+.active-link a {
+  color: #fff;
+  border-bottom: 4px solid greenyellow;
+}
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
+
+.http_body {
+  margin-top: 30px;
+  padding: 20px;
+}

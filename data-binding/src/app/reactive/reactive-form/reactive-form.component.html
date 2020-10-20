@@ -1,0 +1,29 @@
+<div class="user_form">
+  <h2>Signup Form</h2>
+  {{ rForm.value | json }}
+  <form novalidate [formGroup]="rForm" (ngSubmit)="onSubmit(rForm)">
+    <label>
+      <span>Full name</span>
+      <input type="text" placeholder="Your full name" formControlName="name" />
+    </label>
+    <div formGroupName="account">
+      <label>
+        <span>Email address</span>
+        <input
+          type="email"
+          placeholder="Your email address"
+          formControlName="email"
+        />
+      </label>
+      <label>
+        <span>Confirm address</span>
+        <input
+          type="email"
+          placeholder="Confirm your email address"
+          formControlName="confirm"
+        />
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">Sign up</button>
+  </form>
+</div>
