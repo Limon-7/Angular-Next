@@ -1,0 +1,43 @@
+<h2>Ng templete example</h2>
+<ng-container *ngIf="isVisible; then found; else notFound"></ng-container>
+
+<ng-template [ngIf]="isVisible">
+  <p>Show</p>
+</ng-template>
+
+<ng-template #found>
+  <div>Found</div>
+</ng-template>
+
+<ng-template #notFound>
+  <div>Else Block: Hello World!</div>
+</ng-template>
+<p>********************</p>
+<h3>ng-template with TemplateRef and ViewContainerRef</h3>
+
+<ng-template #msg>
+  Welcome to you.<br />
+  Happy learning!
+</ng-template>
+
+<h3>Message</h3>
+
+<div appMessageDirective></div>
+
+<h3>Message</h3>
+
+<div appMessageDirective></div>
+
+<h1>Using Cutom directive to get ng -templete</h1>
+<div>
+  Show Message:
+  <input type="radio" name="rad" (click)="showCpIf = 'yes'" /> Yse
+  <input type="radio" name="rad" (click)="showCpIf = 'no'" /> No
+</div>
+<br />
+<ng-container *appCustomTemplateRef="showCpIf === 'yes'"
+  >Hello cpIf Directive.</ng-container
+>
+<ng-template [appCustomTemplateRef]="showCpIf === 'no'">
+  <div>Message not Available.</div>
+</ng-template>

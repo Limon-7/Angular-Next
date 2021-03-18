@@ -19,6 +19,7 @@ export class TempleteFormComponent implements OnInit {
     { id: 6, value: "Spain" },
 
   ]
+  showCpIf = ""
   constructor() {
 
   }

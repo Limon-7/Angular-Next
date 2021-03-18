@@ -7,9 +7,11 @@ export class HighlightDirective {
   @Input() bgColor: string;
   @Input() textColor: string;
   constructor(private el: ElementRef) {
+
   }
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight(this.bgColor || 'yellow', this.textColor || "black");
+    console.log(this.bgColor)
   }
 
   @HostListener('mouseleave') onMouseLeave() {

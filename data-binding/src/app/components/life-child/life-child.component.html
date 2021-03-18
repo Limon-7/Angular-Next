@@ -4,11 +4,15 @@
   <!-- <div>
     <li *ngFor="let i of heros">{{ i.name }} department:{{ i.department }}</li>
   </div> -->
-  <app-content *ngFor="let hero of heros">
-    <p class="heading">{{ hero.name }}</p>
-    <p class="department">{{ hero.department }}</p>
-  </app-content>
-
+  <div *ngFor="let hero of heros">
+    <p class="lifeheading">{{ hero.name }}</p>
+    <p class="lifedepartment">{{ hero.department }}</p>
+  </div>
+  <app-life-content>
+    <div class="content_header">Hello content projection</div>
+    <div class="content_footer">Hello content projection footer</div>
+  </app-life-content>
   <h1>Content</h1>
   <ng-content></ng-content>
+  <p>Hello</p>
 </div>

@@ -19,10 +19,13 @@ import { JokeListComponent } from './components/view-encapsulation/joke-list/jok
 import { JokeFormComponent } from './components/view-encapsulation/joke-form/joke-form.component';
 import { ReactiveFormComponent } from './reactive/reactive-form/reactive-form.component';
 import { ReactiveFormBuilderComponent } from './reactive/reactive-form-builder/reactive-form-builder.component';
+import { TempleteContainerOutletComponent } from './directives/templete-container-outlet/templete-container-outlet.component';
+import { MessageDirectiveDirective } from './directives/message-directive.directive';
+import { CustomTemplateRefDirective } from './directives/custom-template-ref.directive';
 
 
 @NgModule({
-  declarations: [AppComponent, TempleteFormComponent, HighlightDirective, UserInputComponent, LifeCycleComponent, LifeChildComponent, LifeContentComponent, JokeComponent, JokeListComponent, JokeFormComponent, ReactiveFormComponent, ReactiveFormBuilderComponent,],
+  declarations: [AppComponent, TempleteFormComponent, HighlightDirective, UserInputComponent, LifeCycleComponent, LifeChildComponent, LifeContentComponent, JokeComponent, JokeListComponent, JokeFormComponent, ReactiveFormComponent, ReactiveFormBuilderComponent, TempleteContainerOutletComponent, MessageDirectiveDirective, CustomTemplateRefDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,
